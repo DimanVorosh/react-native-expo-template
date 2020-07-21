@@ -1,15 +1,17 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import { inject, observer } from 'mobx-react'
+import testAPI from './api/test'
 
-const Main = ({ store }) => {
+const Main = ({ test }) => {
   return (
     <View style={styles.container}>
       <Text
         style="auto"
-        onLongPress={() => store.changeHelloText('Write your own code!!!')}
+        onPress={() => testAPI.test()}
+        // onLongPress={() => test.changeHelloText('Write your own code!!!')}
       >
-        {store.helloText}
+        {test.helloText}
       </Text>
     </View>
   )
@@ -24,4 +26,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default inject('store')(observer(Main))
+export default inject('test')(observer(Main))

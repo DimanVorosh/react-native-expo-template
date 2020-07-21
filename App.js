@@ -1,15 +1,13 @@
 import React from 'react'
 import Main from './src/Main'
 import { Provider } from 'mobx-react'
-import observableStore from './src/store'
+import { stores } from './src/store/index'
 import 'mobx-react-lite/batchingForReactNative'
 
 export default function App() {
   return (
-    <Provider store={observableStore}>
+    <Provider {...stores}>
       <Main/>
     </Provider>
   )
 }
-
-

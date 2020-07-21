@@ -1,12 +1,5 @@
-import { action, observable } from 'mobx'
+import test from './test'
 
-class ObservableStore {
-  @observable helloText = 'Greetings! You are now using MoonSolution native app template!'
-
-  @action.bound changeHelloText(text) {
-    this.helloText = text
-  }
+export const stores = {
+  test
 }
-
-const observableStore = new ObservableStore()
-export default observableStore
