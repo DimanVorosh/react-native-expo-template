@@ -1,10 +1,10 @@
 import axios from './index'
 
 export default {
-  async test () {
+  async test() {
     const resp = await axios.post('/login', {
-      login: 'DimanVor',
-      password: 'qwerty123'
+      login: 'test',
+      password: 'qwerty'
     })
     return resp
   }

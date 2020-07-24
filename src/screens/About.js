@@ -1,16 +1,10 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
-import { inject, observer } from 'mobx-react'
 
-const Main = ({ test, navigation }) => {
+const About = () => {
   return (
     <View style={styles.container}>
-      <Text
-        style="auto"
-        onLongPress={() => navigation.navigate('About')}
-      >
-        {test.helloText}
-      </Text>
+      <Text>About</Text>
     </View>
   )
 }
@@ -24,4 +18,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default inject('test')(observer(Main))
+export default About
